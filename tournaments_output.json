@@ -1,0 +1,95 @@
+{
+    "data": {
+        "tournaments": {
+            "pageInfo": {
+                "hasPreviousPage": false,
+                "hasNextPage": true,
+                "startCursor": "PjMLC1oLC0BCQU5HQAsLWgsL",
+                "endCursor": "PjMLC1oLC0BCQEdPQAsLWgsL"
+            },
+            "totalCount": 214,
+            "edges": [
+                {
+                    "cursor": "PjMLC1oLC0BCQU5HQAsLWgsL",
+                    "node": {
+                        "id": "756907",
+                        "name": "LCK - Spring 2024 (Regular Season: Regular Season)",
+                        "nameShortened": "Regular Season"
+                    }
+                },
+                {
+                    "cursor": "PjMLC1oLC0BCQU5HTwsLWgsL",
+                    "node": {
+                        "id": "756908",
+                        "name": "LCK - Spring 2024 (Playoffs: Playoffs)",
+                        "nameShortened": "Playoffs"
+                    }
+                },
+                {
+                    "cursor": "PjMLC1oLC0BCQU5FTwsLWgsL",
+                    "node": {
+                        "id": "756928",
+                        "name": "LEC - Winter 2024 (Regular Season: Regular Season)",
+                        "nameShortened": "Regular Season"
+                    }
+                },
+                {
+                    "cursor": "PjMLC1oLC0BCQU5EQgsLWgsL",
+                    "node": {
+                        "id": "756935",
+                        "name": "LCS - Spring 2024 (Regular Season: Regular Season)",
+                        "nameShortened": "Regular Season"
+                    }
+                },
+                {
+                    "cursor": "PjMLC1oLC0BCQU5BRwsLWgsL",
+                    "node": {
+                        "id": "756960",
+                        "name": "LPL - Spring 2024 (Regular Season: Regular Season)",
+                        "nameShortened": "Regular Season"
+                    }
+                },
+                {
+                    "cursor": "PjMLC1oLC0BCQU5BRQsLWgsL",
+                    "node": {
+                        "id": "756962",
+                        "name": "LPL - Spring 2024 (Playoffs: Playoffs)",
+                        "nameShortened": "Playoffs"
+                    }
+                },
+                {
+                    "cursor": "PjMLC1oLC0BCQEdBTwsLWgsL",
+                    "node": {
+                        "id": "757068",
+                        "name": "LEC - Winter 2024 (Playoffs: Playoffs)",
+                        "nameShortened": "Playoffs"
+                    }
+                },
+                {
+                    "cursor": "PjMLC1oLC0BCQEdARAsLWgsL",
+                    "node": {
+                        "id": "757073",
+                        "name": "VCT Americas - Kickoff 2024 (Groups: Group A)",
+                        "nameShortened": "Group A"
+                    }
+                },
+                {
+                    "cursor": "PjMLC1oLC0BCQEdAQwsLWgsL",
+                    "node": {
+                        "id": "757074",
+                        "name": "VCT Americas - Kickoff 2024 (Playoffs: Playoffs)",
+                        "nameShortened": "Playoffs"
+                    }
+                },
+                {
+                    "cursor": "PjMLC1oLC0BCQEdPQAsLWgsL",
+                    "node": {
+                        "id": "757087",
+                        "name": "LCS - Spring 2024 (Playoffs: Playoffs)",
+                        "nameShortened": "Playoffs"
+                    }
+                }
+            ]
+        }
+    }
+}
