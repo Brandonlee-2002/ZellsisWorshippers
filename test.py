@@ -43,9 +43,19 @@ body2 = """
     }
 }"""
 
+# this snippet gives all series of a tournament, given the tournament's matching id
 body3 = """
-{
+{ 
+  allSeries(filter : { tournamentId: 756908} ){
+    edges{
+      node{
+        id
+      }
+    }
     
+  }
+
+}
 }
 """
 response = requests.post(
