@@ -79,6 +79,6 @@ print(kekw)
 with open("tournaments_output.json", "w") as f:
     json.dump(data, f, indent=4)
 
-with open("brandon is a dumb bitch.json", "w") as f:
+with open("game_id_tournament.json", "w") as f:
     json.dump(wthelly, f, indent=4)
 
