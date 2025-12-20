@@ -1,0 +1,34 @@
+{
+    "data": {
+        "tournament": {
+            "id": "758074",
+            "name": "LCS - Spring 2024 (Playoffs)",
+            "teams": [
+                {
+                    "id": "52541",
+                    "name": "NRG Kia"
+                },
+                {
+                    "id": "47499",
+                    "name": "Dignitas"
+                },
+                {
+                    "id": "47363",
+                    "name": "Team Liquid"
+                },
+                {
+                    "id": "47351",
+                    "name": "Cloud9 Kia"
+                },
+                {
+                    "id": "47497",
+                    "name": "100 Thieves"
+                },
+                {
+                    "id": "340",
+                    "name": "FlyQuest"
+                }
+            ]
+        }
+    }
+}

@@ -46,16 +46,14 @@ body2 = """
 # this snippet gives all series of a tournament, given the tournament's matching id
 body3 = """
 { 
-  allSeries(filter : { tournamentId: 756908} ){
-    edges{
-      node{
-        id
-      }
+  tournament(id: 758074) {
+    id
+    name
+    teams {
+      id name
     }
-    
   }
 
-}
 }
 """
 response = requests.post(
@@ -70,11 +68,19 @@ kekw = requests.post(
     json = {"query":body2}
 )
 
+sixseven = requests.post(
+    "https://api-op.grid.gg/central-data/graphql/",
+    headers=headers,
+    json = {"query":body3}
+)
+
 data = response.json()
 
 wthelly = kekw.json()
 
-print(kekw)
+why = sixseven.json()
+
+print(why)
 
 with open("tournaments_output.json", "w") as f:
     json.dump(data, f, indent=4)
@@ -82,3 +88,5 @@ with open("tournaments_output.json", "w") as f:
 with open("game_id_tournament.json", "w") as f:
     json.dump(wthelly, f, indent=4)
 
+with open("teams_list_tournament.json", "w") as f:
+    json.dump(why, f, indent=4)
