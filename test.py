@@ -1,9 +1,13 @@
 import json
 
 import requests
+import dotenv
+import os
+
+dotenv.load_dotenv()
 
 headers = {
-    "x-api-key": "t79SFuwUHNIVNndQ5qUZsdszfpgXqST5MLRIa3G5"
+    "x-api-key": os.getenv("GRI_API_KEY")
 }
 
 body = """
@@ -36,7 +40,7 @@ body2 = """
   tournament(id: 757087) {
     id
     name
-    titles {
+    teams {
       id
       name
       }

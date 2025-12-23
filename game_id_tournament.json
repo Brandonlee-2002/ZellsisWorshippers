@@ -3,12 +3,7 @@
         "tournament": {
             "id": "757087",
             "name": "LCS - Spring 2024 (Playoffs: Playoffs)",
-            "titles": [
-                {
-                    "id": "3",
-                    "name": "League of Legends"
-                }
-            ]
+            "teams": []
         }
     }
 }
