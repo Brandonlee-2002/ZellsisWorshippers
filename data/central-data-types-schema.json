@@ -1,2234 +1,3202 @@
 {
-    "data": {
-        "__schema": {
-            "types": [
-                {
-                    "name": "Boolean"
-                },
-                {
-                    "name": "BooleanFilter"
-                },
-                {
-                    "name": "Cursor"
-                },
-                {
-                    "name": "DataProvider",
-                    "fields": [
-                        {
-                            "name": "name",
-                            "description": "The name of the external data provider.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "description",
-                            "description": "Description of the data provider.",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "Date"
-                },
-                {
-                    "name": "DateTime"
-                },
-                {
-                    "name": "DateTimeFilter"
-                },
-                {
-                    "name": "Decimal"
-                },
-                {
-                    "name": "ErrorDetail"
-                },
-                {
-                    "name": "ErrorType"
-                },
-                {
-                    "name": "ExternalEntity",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID used by the external data provider.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "ExternalLink",
-                    "fields": [
-                        {
-                            "name": "dataProvider",
-                            "description": "The external data provider.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "externalEntity",
-                            "description": "The external information.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "Float"
-                },
-                {
-                    "name": "GameFilter"
-                },
-                {
-                    "name": "HexColor"
-                },
-                {
-                    "name": "ID"
-                },
-                {
-                    "name": "IdFilter"
-                },
-                {
-                    "name": "Int"
-                },
-                {
-                    "name": "IntFilter"
-                },
-                {
-                    "name": "MachineDataSource",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "MapFilter"
-                },
-                {
-                    "name": "Money",
-                    "fields": [
-                        {
-                            "name": "amount",
-                            "description": "The amount in USD.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "Nationality",
-                    "fields": [
-                        {
-                            "name": "code",
-                            "description": "The ISO 3166-1 Alpha-3 code for the country (e.g., 'USA' for the United States).",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The full name of the country (e.g., 'United States').",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "NationalityFilter"
-                },
-                {
-                    "name": "NullableDateFilter"
-                },
-                {
-                    "name": "NullableIdFilter"
-                },
-                {
-                    "name": "OrderDirection"
-                },
-                {
-                    "name": "Organization",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the organization.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the organization.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "teams",
-                            "description": "The teams that belong to the organization.",
-                            "type": {
-                                "kind": "LIST"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "private",
-                            "description": "The visibility status of the organization.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "updatedAt",
-                            "description": "The date and time of the last update.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "OrganizationConnection",
-                    "fields": [
-                        {
-                            "name": "totalCount",
-                            "description": "Total count of players in the API.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "edges",
-                            "description": "All players edges for query on a given page.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "pageInfo",
-                            "description": "Information about current page being pulled with query.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "OrganizationEdge",
-                    "fields": [
-                        {
-                            "name": "cursor",
-                            "description": "Organizations cursor value for the edge.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "node",
-                            "description": "Organizations.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "OrganizationFilter"
-                },
-                {
-                    "name": "OrganizationInterface",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the organization.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the organization.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "OrganizationRelation",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the organization.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the organization.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "PageInfo",
-                    "fields": [
-                        {
-                            "name": "hasPreviousPage",
-                            "description": "If there is a page before the one being returned.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "hasNextPage",
-                            "description": "If there is a page after the one being returned.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "startCursor",
-                            "description": "The cursor of the first edge of the page.",
-                            "type": {
-                                "name": "Cursor",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "endCursor",
-                            "description": "The cursor of the last edge of the page.",
-                            "type": {
-                                "name": "Cursor",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "Player",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the player.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "nickname",
-                            "description": "The name of the player.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "externalLinks",
-                            "description": "The external player IDs and providers.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "title",
-                            "description": "The title the player is currently playing.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "team",
-                            "description": "The team the player is currently playing.",
-                            "type": {
-                                "name": "Team",
-                                "kind": "OBJECT"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "private",
-                            "description": "The visibility status of the player.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "age",
-                            "description": "The player's age.",
-                            "type": {
-                                "name": "Int",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "fullName",
-                            "description": "The player's full name.",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "nationality",
-                            "description": "The player's nationality.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "imageUrl",
-                            "description": "The player image URL.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "roles",
-                            "description": "The player's roles (e.g. MID, SUPPORT).",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "updatedAt",
-                            "description": "The date and time of the last update.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "PlayerConnection",
-                    "fields": [
-                        {
-                            "name": "totalCount",
-                            "description": "Total count of players in the API.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "edges",
-                            "description": "All players edges for query on a given page.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "pageInfo",
-                            "description": "Information about current page being pulled with query.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "PlayerEdge",
-                    "fields": [
-                        {
-                            "name": "cursor",
-                            "description": "Players cursor value for the edge.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "node",
-                            "description": "Players.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "PlayerFilter"
-                },
-                {
-                    "name": "PlayerPlayerRoleFilter"
-                },
-                {
-                    "name": "PlayerRole",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the player role.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the player role.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "title",
-                            "description": "The title of the player role.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "private",
-                            "description": "The visibility of this entity to other users.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "PlayerRoleFilter"
-                },
-                {
-                    "name": "PlayerRoleTitleFilter"
-                },
-                {
-                    "name": "PlayerType"
-                },
-                {
-                    "name": "ProductServiceLevel",
-                    "fields": [
-                        {
-                            "name": "productName",
-                            "description": "The name of the product.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "serviceLevel",
-                            "description": "The availability level for the product.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "ProductServiceLevelFilter"
-                },
-                {
-                    "name": "Query",
-                    "fields": [
-                        {
-                            "name": "title",
-                            "description": "Get a title by ID.",
-                            "type": {
-                                "name": "Title",
-                                "kind": "OBJECT"
-                            },
-                            "args": [
-                                {
-                                    "name": "id",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "titles",
-                            "description": "Get all titles.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": [
-                                {
-                                    "name": "filter",
-                                    "type": {
-                                        "name": "TitleFilter"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "tournament",
-                            "description": "Get a tournament by ID.",
-                            "type": {
-                                "name": "Tournament",
-                                "kind": "OBJECT"
-                            },
-                            "args": [
-                                {
-                                    "name": "id",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "tournaments",
-                            "description": "Get multiple tournaments by query specifications.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": [
-                                {
-                                    "name": "filter",
-                                    "type": {
-                                        "name": "TournamentFilter"
-                                    }
-                                },
-                                {
-                                    "name": "first",
-                                    "type": {
-                                        "name": "Int"
-                                    }
-                                },
-                                {
-                                    "name": "after",
-                                    "type": {
-                                        "name": "Cursor"
-                                    }
-                                },
-                                {
-                                    "name": "last",
-                                    "type": {
-                                        "name": "Int"
-                                    }
-                                },
-                                {
-                                    "name": "before",
-                                    "type": {
-                                        "name": "Cursor"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "tournamentIdByExternalId",
-                            "description": "Get the GRID Tournament ID by an external ID.",
-                            "type": {
-                                "name": "ID",
-                                "kind": "SCALAR"
-                            },
-                            "args": [
-                                {
-                                    "name": "dataProviderName",
-                                    "type": {}
-                                },
-                                {
-                                    "name": "externalTournamentId",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "team",
-                            "description": "Get a team by ID.",
-                            "type": {
-                                "name": "Team",
-                                "kind": "OBJECT"
-                            },
-                            "args": [
-                                {
-                                    "name": "id",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "teams",
-                            "description": "Get multiple teams by query specifications.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": [
-                                {
-                                    "name": "first",
-                                    "type": {
-                                        "name": "Int"
-                                    }
-                                },
-                                {
-                                    "name": "after",
-                                    "type": {
-                                        "name": "Cursor"
-                                    }
-                                },
-                                {
-                                    "name": "last",
-                                    "type": {
-                                        "name": "Int"
-                                    }
-                                },
-                                {
-                                    "name": "before",
-                                    "type": {
-                                        "name": "Cursor"
-                                    }
-                                },
-                                {
-                                    "name": "filter",
-                                    "type": {
-                                        "name": "TeamFilter"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "teamIdByExternalId",
-                            "description": "Get the GRID Team ID by an external ID.",
-                            "type": {
-                                "name": "ID",
-                                "kind": "SCALAR"
-                            },
-                            "args": [
-                                {
-                                    "name": "dataProviderName",
-                                    "type": {}
-                                },
-                                {
-                                    "name": "externalTeamId",
-                                    "type": {}
-                                },
-                                {
-                                    "name": "titleId",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "series",
-                            "description": "Get a series by ID.",
-                            "type": {
-                                "name": "Series",
-                                "kind": "OBJECT"
-                            },
-                            "args": [
-                                {
-                                    "name": "id",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "seriesFormats",
-                            "description": "Get supported series formats.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "seriesIdByExternalId",
-                            "description": "Get the GRID Series ID by an external ID.",
-                            "type": {
-                                "name": "ID",
-                                "kind": "SCALAR"
-                            },
-                            "args": [
-                                {
-                                    "name": "dataProviderName",
-                                    "type": {}
-                                },
-                                {
-                                    "name": "externalSeriesId",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "allSeries",
-                            "description": "Get multiple series by query specifications.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": [
-                                {
-                                    "name": "first",
-                                    "type": {
-                                        "name": "Int"
-                                    }
-                                },
-                                {
-                                    "name": "after",
-                                    "type": {
-                                        "name": "Cursor"
-                                    }
-                                },
-                                {
-                                    "name": "filter",
-                                    "type": {
-                                        "name": "SeriesFilter"
-                                    }
-                                },
-                                {
-                                    "name": "last",
-                                    "type": {
-                                        "name": "Int"
-                                    }
-                                },
-                                {
-                                    "name": "before",
-                                    "type": {
-                                        "name": "Cursor"
-                                    }
-                                },
-                                {
-                                    "name": "orderBy",
-                                    "type": {}
-                                },
-                                {
-                                    "name": "orderDirection",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "player",
-                            "description": "Get a player by ID.",
-                            "type": {
-                                "name": "Player",
-                                "kind": "OBJECT"
-                            },
-                            "args": [
-                                {
-                                    "name": "id",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "players",
-                            "description": "Get multiple players by query specifications.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": [
-                                {
-                                    "name": "first",
-                                    "type": {
-                                        "name": "Int"
-                                    }
-                                },
-                                {
-                                    "name": "after",
-                                    "type": {
-                                        "name": "Cursor"
-                                    }
-                                },
-                                {
-                                    "name": "filter",
-                                    "type": {
-                                        "name": "PlayerFilter"
-                                    }
-                                },
-                                {
-                                    "name": "last",
-                                    "type": {
-                                        "name": "Int"
-                                    }
-                                },
-                                {
-                                    "name": "before",
-                                    "type": {
-                                        "name": "Cursor"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "playerIdByExternalId",
-                            "description": "Get the GRID Player ID by an external ID.",
-                            "type": {
-                                "name": "ID",
-                                "kind": "SCALAR"
-                            },
-                            "args": [
-                                {
-                                    "name": "dataProviderName",
-                                    "type": {}
-                                },
-                                {
-                                    "name": "externalPlayerId",
-                                    "type": {}
-                                },
-                                {
-                                    "name": "titleId",
-                                    "type": {
-                                        "name": "ID"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "organization",
-                            "description": "Get an organization by ID.",
-                            "type": {
-                                "name": "Organization",
-                                "kind": "OBJECT"
-                            },
-                            "args": [
-                                {
-                                    "name": "id",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "organizations",
-                            "description": "Get multiple organizations by query specifications.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": [
-                                {
-                                    "name": "first",
-                                    "type": {
-                                        "name": "Int"
-                                    }
-                                },
-                                {
-                                    "name": "after",
-                                    "type": {
-                                        "name": "Cursor"
-                                    }
-                                },
-                                {
-                                    "name": "filter",
-                                    "type": {
-                                        "name": "OrganizationFilter"
-                                    }
-                                },
-                                {
-                                    "name": "last",
-                                    "type": {
-                                        "name": "Int"
-                                    }
-                                },
-                                {
-                                    "name": "before",
-                                    "type": {
-                                        "name": "Cursor"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "gameIdByExternalId",
-                            "description": "Get the GRID Game ID by an external ID.",
-                            "type": {
-                                "name": "ID",
-                                "kind": "SCALAR"
-                            },
-                            "args": [
-                                {
-                                    "name": "dataProviderName",
-                                    "type": {}
-                                },
-                                {
-                                    "name": "externalGameId",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "dataProviders",
-                            "description": "Get supported data providers.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "playerRole",
-                            "description": "Get a player role by ID.",
-                            "type": {
-                                "name": "PlayerRole",
-                                "kind": "OBJECT"
-                            },
-                            "args": [
-                                {
-                                    "name": "id",
-                                    "type": {}
-                                }
-                            ]
-                        },
-                        {
-                            "name": "playerRoles",
-                            "description": "Get multiple player roles by query specifications.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": [
-                                {
-                                    "name": "filter",
-                                    "type": {
-                                        "name": "PlayerRoleFilter"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "_service",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "_entities",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": [
-                                {
-                                    "name": "representations",
-                                    "type": {}
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Series",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "title",
-                            "description": "The title being played in the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "tournament",
-                            "description": "The tournament in which the series is being played.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "teams",
-                            "description": "The teams participating in the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "startTimeScheduled",
-                            "description": "The scheduled start time of the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "format",
-                            "description": "The format of the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "externalLinks",
-                            "description": "The external series IDs and providers.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "productServiceLevels",
-                            "description": "The service level for the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "streams",
-                            "description": "The list of stream URLs available for the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "type",
-                            "description": "The type of the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "private",
-                            "description": "The visibility status of the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "players",
-                            "description": "The players participating in the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "updatedAt",
-                            "description": "The date and time of the last update.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "SeriesConnection",
-                    "fields": [
-                        {
-                            "name": "totalCount",
-                            "description": "Total count of series in the API.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "edges",
-                            "description": "All series edges for query on a given page.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "pageInfo",
-                            "description": "Information about current page being pulled with query.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "SeriesEdge",
-                    "fields": [
-                        {
-                            "name": "cursor",
-                            "description": "Series cursor value for the edge.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "node",
-                            "description": "Series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "SeriesFilter"
-                },
-                {
-                    "name": "SeriesFormat",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the format.",
-                            "type": {
-                                "name": "ID",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of a format.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "nameShortened",
-                            "description": "The shortened name of a format (max. 5 characters).",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "SeriesLiveFilter"
-                },
-                {
-                    "name": "SeriesOrderBy"
-                },
-                {
-                    "name": "SeriesPlayerFilter"
-                },
-                {
-                    "name": "SeriesTournamentFilter"
-                },
-                {
-                    "name": "SeriesTournamentTitleFilter"
-                },
-                {
-                    "name": "SeriesType"
-                },
-                {
-                    "name": "ServiceLevel"
-                },
-                {
-                    "name": "String"
-                },
-                {
-                    "name": "StringFilter"
-                },
-                {
-                    "name": "Team",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "nameShortened",
-                            "description": "The shortened name of a team.",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "colorPrimary",
-                            "description": "The primary color of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "colorSecondary",
-                            "description": "The secondary color of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "logoUrl",
-                            "description": "The team logo URL.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "rating",
-                            "description": "The team rating.",
-                            "type": {
-                                "name": "Float",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "externalLinks",
-                            "description": "The external team IDs and providers.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "titles",
-                            "description": "@deprecated('Use title field instead.') The titles the team is related to.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "title",
-                            "description": "Title the team is related to. 'titles' field will be removed soon and every team will have a single title.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "organization",
-                            "description": "The organization the team plays for.",
-                            "type": {
-                                "name": "OrganizationRelation",
-                                "kind": "OBJECT"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "private",
-                            "description": "The visibility status of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "updatedAt",
-                            "description": "The date and time of the last update.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "TeamConnection",
-                    "fields": [
-                        {
-                            "name": "totalCount",
-                            "description": "Total count of teams in the API.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "edges",
-                            "description": "All team edges for query on a given page.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "pageInfo",
-                            "description": "Information about current page being pulled with query.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "TeamEdge",
-                    "fields": [
-                        {
-                            "name": "cursor",
-                            "description": "Team cursor value cursor value for the edge.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "node",
-                            "description": "Team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "TeamFilter"
-                },
-                {
-                    "name": "TeamInterface",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "nameShortened",
-                            "description": "The shortened name of a team.",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "colorPrimary",
-                            "description": "The primary color of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "colorSecondary",
-                            "description": "The secondary color of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "logoUrl",
-                            "description": "The team logo URL.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "rating",
-                            "description": "The team rating.",
-                            "type": {
-                                "name": "Float",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "titles",
-                            "description": "The titles the team is related to.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "TeamParticipant",
-                    "fields": [
-                        {
-                            "name": "baseInfo",
-                            "description": "The team base information.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "scoreAdvantage",
-                            "description": "The team score advantage for the team in the series.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "TeamRelation",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "nameShortened",
-                            "description": "The shortened name of a team.",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "colorPrimary",
-                            "description": "The primary color of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "colorSecondary",
-                            "description": "The secondary color of the team.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "logoUrl",
-                            "description": "The team logo URL.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "rating",
-                            "description": "The team rating.",
-                            "type": {
-                                "name": "Float",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "titles",
-                            "description": "The titles the team is related to.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "Title",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the title.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the title.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "nameShortened",
-                            "description": "The shortened name of the title (max. 20 characters).",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "logoUrl",
-                            "description": "The title logo URL.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "private",
-                            "description": "The visibility status of the title.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "TitleFilter"
-                },
-                {
-                    "name": "Tournament",
-                    "fields": [
-                        {
-                            "name": "id",
-                            "description": "The ID of the tournament.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "description": "The name of the tournament.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "nameShortened",
-                            "description": "The shortened name of the tournament (max. 30 characters).",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "externalLinks",
-                            "description": "The external tournament IDs and providers.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "logoUrl",
-                            "description": "The tournament logo URL.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "titles",
-                            "description": "The titles linked to the tournament.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "teams",
-                            "description": "The teams linked to the tournament.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "startDate",
-                            "description": "The start date of the tournament.",
-                            "type": {
-                                "name": "Date",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "endDate",
-                            "description": "The end date of the tournament.",
-                            "type": {
-                                "name": "Date",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "prizePool",
-                            "description": "The tournament prize pool in USD.",
-                            "type": {
-                                "name": "Money",
-                                "kind": "OBJECT"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "parent",
-                            "description": "The parent tournament of the tournament.",
-                            "type": {
-                                "name": "Tournament",
-                                "kind": "OBJECT"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "children",
-                            "description": "The children tournament of the tournament.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "private",
-                            "description": "The visibility status of the tournament.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "venueType",
-                            "description": "The type of venue where the tournament is held.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "updatedAt",
-                            "description": "The date and time of the last update.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "TournamentConnection",
-                    "fields": [
-                        {
-                            "name": "totalCount",
-                            "description": "Total count of tournaments in the API.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "edges",
-                            "description": "All tournament edges for query on a given page.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "pageInfo",
-                            "description": "Information about current page being pulled with query.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "TournamentEdge",
-                    "fields": [
-                        {
-                            "name": "cursor",
-                            "description": "Tournament cursor value for the edge.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "node",
-                            "description": "Tournament.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "TournamentFilter"
-                },
-                {
-                    "name": "TournamentTitleFilter"
-                },
-                {
-                    "name": "TournamentVenueType"
-                },
-                {
-                    "name": "Url"
-                },
-                {
-                    "name": "VideoStream",
-                    "fields": [
-                        {
-                            "name": "url",
-                            "description": "URL link to live video stream.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "_Any"
-                },
-                {
-                    "name": "_Entity"
-                },
-                {
-                    "name": "_FieldSet"
-                },
-                {
-                    "name": "_Service",
-                    "fields": [
-                        {
-                            "name": "sdl",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "__Directive",
-                    "fields": [
-                        {
-                            "name": "name",
-                            "description": "The __Directive type represents a Directive that a server supports.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "description",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "isRepeatable",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "locations",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "args",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": [
-                                {
-                                    "name": "includeDeprecated",
-                                    "type": {
-                                        "name": "Boolean"
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "__DirectiveLocation"
-                },
-                {
-                    "name": "__EnumValue",
-                    "fields": [
-                        {
-                            "name": "name",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "description",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "isDeprecated",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "deprecationReason",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "__Field",
-                    "fields": [
-                        {
-                            "name": "name",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "description",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "args",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": [
-                                {
-                                    "name": "includeDeprecated",
-                                    "type": {
-                                        "name": "Boolean"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "type",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "isDeprecated",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "deprecationReason",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "__InputValue",
-                    "fields": [
-                        {
-                            "name": "name",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "description",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "type",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "defaultValue",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "isDeprecated",
-                            "type": {
-                                "name": "Boolean",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "deprecationReason",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "__Schema",
-                    "fields": [
-                        {
-                            "name": "description",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "types",
-                            "description": "A list of all types supported by this server.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "queryType",
-                            "description": "The type that query operations will be rooted at.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "mutationType",
-                            "description": "If this server supports mutation, the type that mutation operations will be rooted at.",
-                            "type": {
-                                "name": "__Type",
-                                "kind": "OBJECT"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "directives",
-                            "description": "'A list of all directives supported by this server.",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "subscriptionType",
-                            "description": "'If this server support subscription, the type that subscription operations will be rooted at.",
-                            "type": {
-                                "name": "__Type",
-                                "kind": "OBJECT"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "__Type",
-                    "fields": [
-                        {
-                            "name": "kind",
-                            "type": {
-                                "kind": "NON_NULL"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "name",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "description",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "fields",
-                            "type": {
-                                "kind": "LIST"
-                            },
-                            "args": [
-                                {
-                                    "name": "includeDeprecated",
-                                    "type": {
-                                        "name": "Boolean"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "interfaces",
-                            "type": {
-                                "kind": "LIST"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "possibleTypes",
-                            "type": {
-                                "kind": "LIST"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "enumValues",
-                            "type": {
-                                "kind": "LIST"
-                            },
-                            "args": [
-                                {
-                                    "name": "includeDeprecated",
-                                    "type": {
-                                        "name": "Boolean"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "inputFields",
-                            "type": {
-                                "kind": "LIST"
-                            },
-                            "args": [
-                                {
-                                    "name": "includeDeprecated",
-                                    "type": {
-                                        "name": "Boolean"
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "name": "ofType",
-                            "type": {
-                                "name": "__Type",
-                                "kind": "OBJECT"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "isOneOf",
-                            "description": "This field is considered experimental because it has not yet been ratified in the graphql specification",
-                            "type": {
-                                "name": "Boolean",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        },
-                        {
-                            "name": "specifiedByURL",
-                            "type": {
-                                "name": "String",
-                                "kind": "SCALAR"
-                            },
-                            "args": []
-                        }
-                    ]
-                },
-                {
-                    "name": "__TypeKind"
+  "data": {
+    "__schema": {
+      "types": [
+        {
+          "name": "Boolean",
+          "description": "Built-in Boolean",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "BooleanFilter",
+          "description": "Boolean filter for true/false fields.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "Cursor",
+          "description": "Cursor value for pagination.",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "DataProvider",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "name",
+              "description": "The name of the external data provider.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
                 }
-            ]
+              },
+              "args": []
+            },
+            {
+              "name": "description",
+              "description": "Description of the data provider.",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "Date",
+          "description": "Date formatted as ISO 8601",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "DateTime",
+          "description": "DateTime formatted as ISO 8601.",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "DateTimeFilter",
+          "description": "Filter by a datetime range.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "Decimal",
+          "description": "Decimal number representation.",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "ErrorDetail",
+          "kind": "ENUM"
+        },
+        {
+          "name": "ErrorType",
+          "kind": "ENUM"
+        },
+        {
+          "name": "ExternalEntity",
+          "description": "Information provided by the external data provider.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID used by the external data provider.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "ExternalLink",
+          "description": "Linking information for an external data provider.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "dataProvider",
+              "description": "The external data provider.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "DataProvider",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "externalEntity",
+              "description": "The external information.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ExternalEntity",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "Float",
+          "description": "Built-in Float",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "GameFilter",
+          "description": "Filter for series by game data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "HexColor",
+          "description": "Hexadecimal value of an RGB color.",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "ID",
+          "description": "Built-in ID",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "IdFilter",
+          "description": "ID filter for entity identifiers.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "Int",
+          "description": "Built-in Int",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "IntFilter",
+          "description": "Filter by integer value or range.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "MachineDataSource",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "MapFilter",
+          "description": "Filter for map data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "Money",
+          "description": "A monetary value.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "amount",
+              "description": "The amount in USD.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Decimal",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "Nationality",
+          "description": "A player's nationality.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "code",
+              "description": "The ISO 3166-1 Alpha-3 code for the country (e.g., 'USA' for the United States).",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The full name of the country (e.g., 'United States').",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "NationalityFilter",
+          "description": "Filter by player nationality.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "NullableDateFilter",
+          "description": "Filter by a date range. If both 'gte' and 'lte' are null, it'll fetch the entities for which the field the filter is applied to is null.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "NullableIdFilter",
+          "description": "ID filter with nullable value.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "OrderDirection",
+          "description": "Order in which the results will be provided.",
+          "kind": "ENUM"
+        },
+        {
+          "name": "Organization",
+          "description": "An organization.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the organization.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The name of the organization.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "teams",
+              "description": "The teams that belong to the organization.",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "private",
+              "description": "The visibility status of the organization.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "updatedAt",
+              "description": "The date and time of the last update.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "DateTime",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "OrganizationConnection",
+          "description": "The result of querying a list of organizations. It provides pagination information.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "totalCount",
+              "description": "Total count of players in the API.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Int",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "edges",
+              "description": "All players edges for query on a given page.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "pageInfo",
+              "description": "Information about current page being pulled with query.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "PageInfo",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "OrganizationEdge",
+          "description": "Organization and cursor information.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "cursor",
+              "description": "Organizations cursor value for the edge.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Cursor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "node",
+              "description": "Organizations.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Organization",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "OrganizationFilter",
+          "description": "Filter for organization by data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "OrganizationInterface",
+          "description": "An interface for organization types.",
+          "kind": "INTERFACE",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the organization.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The name of the organization.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "OrganizationRelation",
+          "description": "An organization relation. Removes connection to Teams from the Organization.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the organization.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The name of the organization.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "PageInfo",
+          "description": "Information about current paginated data set position.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "hasPreviousPage",
+              "description": "If there is a page before the one being returned.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "hasNextPage",
+              "description": "If there is a page after the one being returned.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "startCursor",
+              "description": "The cursor of the first edge of the page.",
+              "type": {
+                "name": "Cursor",
+                "description": "Cursor value for pagination.",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "endCursor",
+              "description": "The cursor of the last edge of the page.",
+              "type": {
+                "name": "Cursor",
+                "description": "Cursor value for pagination.",
+                "kind": "SCALAR"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "Player",
+          "description": "A player.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the player.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "nickname",
+              "description": "The name of the player.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "externalLinks",
+              "description": "The external player IDs and providers.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "title",
+              "description": "The title the player is currently playing.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Title",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "team",
+              "description": "The team the player is currently playing.",
+              "type": {
+                "name": "Team",
+                "description": "A team.",
+                "kind": "OBJECT"
+              },
+              "args": []
+            },
+            {
+              "name": "private",
+              "description": "The visibility status of the player.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "age",
+              "description": "The player's age.",
+              "type": {
+                "name": "Int",
+                "description": "Built-in Int",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "fullName",
+              "description": "The player's full name.",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "nationality",
+              "description": "The player's nationality.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "imageUrl",
+              "description": "The player image URL.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Url",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "roles",
+              "description": "The player's roles (e.g. MID, SUPPORT).",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "updatedAt",
+              "description": "The date and time of the last update.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "DateTime",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "PlayerConnection",
+          "description": "The result of querying a list of players. It provides pagination information.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "totalCount",
+              "description": "Total count of players in the API.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Int",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "edges",
+              "description": "All players edges for query on a given page.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "pageInfo",
+              "description": "Information about current page being pulled with query.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "PageInfo",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "PlayerEdge",
+          "description": "Player and cursor information.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "cursor",
+              "description": "Players cursor value for the edge.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Cursor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "node",
+              "description": "Players.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Player",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "PlayerFilter",
+          "description": "Filter for player data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "PlayerPlayerRoleFilter",
+          "description": "Filter by player role.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "PlayerRole",
+          "description": "A player's role (e.g. MID, SUPPORT).",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the player role.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The name of the player role.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "title",
+              "description": "The title of the player role.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Title",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "private",
+              "description": "The visibility of this entity to other users.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "PlayerRoleFilter",
+          "description": "Filter by player role.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "PlayerRoleTitleFilter",
+          "description": "Filter player roles by title.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "PlayerType",
+          "description": "The type of player being returned.",
+          "kind": "ENUM"
+        },
+        {
+          "name": "ProductServiceLevel",
+          "description": "The availability of a product for a given series.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "productName",
+              "description": "The name of the product.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "serviceLevel",
+              "description": "The availability level for the product.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ServiceLevel",
+                  "kind": "ENUM"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "ProductServiceLevelFilter",
+          "description": "Filters for series by product and/or by service level.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "Query",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "title",
+              "description": "Get a title by ID.",
+              "type": {
+                "name": "Title",
+                "description": "A title.",
+                "kind": "OBJECT"
+              },
+              "args": [
+                {
+                  "name": "id",
+                  "description": "The ID of the title to retrieve.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "titles",
+              "description": "Get all titles.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": [
+                {
+                  "name": "filter",
+                  "description": "Filters for titles results.",
+                  "type": {
+                    "name": "TitleFilter",
+                    "kind": "INPUT_OBJECT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "tournament",
+              "description": "Get a tournament by ID.",
+              "type": {
+                "name": "Tournament",
+                "description": "A tournament.",
+                "kind": "OBJECT"
+              },
+              "args": [
+                {
+                  "name": "id",
+                  "description": "The ID of the tournament to retrieve.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "tournaments",
+              "description": "Get multiple tournaments by query specifications.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "TournamentConnection",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": [
+                {
+                  "name": "filter",
+                  "description": "Filters for tournament results.",
+                  "type": {
+                    "name": "TournamentFilter",
+                    "kind": "INPUT_OBJECT"
+                  }
+                },
+                {
+                  "name": "first",
+                  "description": "Amount of nodes to return starting from the beginning. Defaults to 10.",
+                  "type": {
+                    "name": "Int",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "after",
+                  "description": "Cursor, after which results to query.",
+                  "type": {
+                    "name": "Cursor",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "last",
+                  "description": "Amount of nodes to return starting from the end.",
+                  "type": {
+                    "name": "Int",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "before",
+                  "description": "Cursor, before which results to query.",
+                  "type": {
+                    "name": "Cursor",
+                    "kind": "SCALAR"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "tournamentIdByExternalId",
+              "description": "Get the GRID Tournament ID by an external ID.",
+              "type": {
+                "name": "ID",
+                "description": "Built-in ID",
+                "kind": "SCALAR"
+              },
+              "args": [
+                {
+                  "name": "dataProviderName",
+                  "description": "The name of the data provider to look by. An example could be \"STEAM\"",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "String",
+                      "kind": "SCALAR"
+                    }
+                  }
+                },
+                {
+                  "name": "externalTournamentId",
+                  "description": "The external ID to look for.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "team",
+              "description": "Get a team by ID.",
+              "type": {
+                "name": "Team",
+                "description": "A team.",
+                "kind": "OBJECT"
+              },
+              "args": [
+                {
+                  "name": "id",
+                  "description": "The ID of the team to retrieve.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "teams",
+              "description": "Get multiple teams by query specifications.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "TeamConnection",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": [
+                {
+                  "name": "first",
+                  "description": "Amount of nodes to return starting from the beginning. Defaults to 10.",
+                  "type": {
+                    "name": "Int",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "after",
+                  "description": "Cursor, after which results to query.",
+                  "type": {
+                    "name": "Cursor",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "last",
+                  "description": "Amount of nodes to return starting from the end.",
+                  "type": {
+                    "name": "Int",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "before",
+                  "description": "Cursor, before which results to query.",
+                  "type": {
+                    "name": "Cursor",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "filter",
+                  "description": "Filters for team results.",
+                  "type": {
+                    "name": "TeamFilter",
+                    "kind": "INPUT_OBJECT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "teamIdByExternalId",
+              "description": "Get the GRID Team ID by an external ID.",
+              "type": {
+                "name": "ID",
+                "description": "Built-in ID",
+                "kind": "SCALAR"
+              },
+              "args": [
+                {
+                  "name": "dataProviderName",
+                  "description": "The name of the data provider to look by. An example could be \"STEAM\"",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "String",
+                      "kind": "SCALAR"
+                    }
+                  }
+                },
+                {
+                  "name": "externalTeamId",
+                  "description": "The external ID to look for.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                },
+                {
+                  "name": "titleId",
+                  "description": "The title in which the team participates.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "series",
+              "description": "Get a series by ID.",
+              "type": {
+                "name": "Series",
+                "description": "A series.",
+                "kind": "OBJECT"
+              },
+              "args": [
+                {
+                  "name": "id",
+                  "description": "The ID of the series to retrieve.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "seriesFormats",
+              "description": "Get supported series formats.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "seriesIdByExternalId",
+              "description": "Get the GRID Series ID by an external ID.",
+              "type": {
+                "name": "ID",
+                "description": "Built-in ID",
+                "kind": "SCALAR"
+              },
+              "args": [
+                {
+                  "name": "dataProviderName",
+                  "description": "The name of the data provider to look by. An example could be \"STEAM\"",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "String",
+                      "kind": "SCALAR"
+                    }
+                  }
+                },
+                {
+                  "name": "externalSeriesId",
+                  "description": "The external ID to look for.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "allSeries",
+              "description": "Get multiple series by query specifications.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "SeriesConnection",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": [
+                {
+                  "name": "first",
+                  "description": "Amount of nodes to return starting from the beginning. Defaults to 10.",
+                  "type": {
+                    "name": "Int",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "after",
+                  "description": "Cursor, after which results to query.",
+                  "type": {
+                    "name": "Cursor",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "filter",
+                  "description": "Filters for series results.",
+                  "type": {
+                    "name": "SeriesFilter",
+                    "kind": "INPUT_OBJECT"
+                  }
+                },
+                {
+                  "name": "last",
+                  "description": "Amount of nodes to return starting from the end.",
+                  "type": {
+                    "name": "Int",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "before",
+                  "description": "Cursor, before which results to query.",
+                  "type": {
+                    "name": "Cursor",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "orderBy",
+                  "description": "Ordering of resulting series set.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "SeriesOrderBy",
+                      "kind": "ENUM"
+                    }
+                  }
+                },
+                {
+                  "name": "orderDirection",
+                  "description": "Whether to order by ascending or descending direction.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "OrderDirection",
+                      "kind": "ENUM"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "player",
+              "description": "Get a player by ID.",
+              "type": {
+                "name": "Player",
+                "description": "A player.",
+                "kind": "OBJECT"
+              },
+              "args": [
+                {
+                  "name": "id",
+                  "description": "The ID of the player to retrieve.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "players",
+              "description": "Get multiple players by query specifications.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "PlayerConnection",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": [
+                {
+                  "name": "first",
+                  "description": "Amount of nodes to return starting from the beginning. Defaults to 10.",
+                  "type": {
+                    "name": "Int",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "after",
+                  "description": "Cursor, after which results to query.",
+                  "type": {
+                    "name": "Cursor",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "filter",
+                  "description": "Filters for player results.",
+                  "type": {
+                    "name": "PlayerFilter",
+                    "kind": "INPUT_OBJECT"
+                  }
+                },
+                {
+                  "name": "last",
+                  "description": "Amount of nodes to return starting from the end.",
+                  "type": {
+                    "name": "Int",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "before",
+                  "description": "Cursor, before which results to query.",
+                  "type": {
+                    "name": "Cursor",
+                    "kind": "SCALAR"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "playerIdByExternalId",
+              "description": "Get the GRID Player ID by an external ID.",
+              "type": {
+                "name": "ID",
+                "description": "Built-in ID",
+                "kind": "SCALAR"
+              },
+              "args": [
+                {
+                  "name": "dataProviderName",
+                  "description": "The name of the data provider to look by. An example could be \"STEAM\"",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "String",
+                      "kind": "SCALAR"
+                    }
+                  }
+                },
+                {
+                  "name": "externalPlayerId",
+                  "description": "The external ID to look for.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                },
+                {
+                  "name": "titleId",
+                  "description": "The title player belongs to.",
+                  "type": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "organization",
+              "description": "Get an organization by ID.",
+              "type": {
+                "name": "Organization",
+                "description": "An organization.",
+                "kind": "OBJECT"
+              },
+              "args": [
+                {
+                  "name": "id",
+                  "description": "The ID of the organization to retrieve.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "organizations",
+              "description": "Get multiple organizations by query specifications.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "OrganizationConnection",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": [
+                {
+                  "name": "first",
+                  "description": "Amount of nodes to return starting from the beginning. Defaults to 10.",
+                  "type": {
+                    "name": "Int",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "after",
+                  "description": "Cursor, after which results to query.",
+                  "type": {
+                    "name": "Cursor",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "filter",
+                  "description": "Filters for organization results.",
+                  "type": {
+                    "name": "OrganizationFilter",
+                    "kind": "INPUT_OBJECT"
+                  }
+                },
+                {
+                  "name": "last",
+                  "description": "Amount of nodes to return starting from the end.",
+                  "type": {
+                    "name": "Int",
+                    "kind": "SCALAR"
+                  }
+                },
+                {
+                  "name": "before",
+                  "description": "Cursor, before which results to query.",
+                  "type": {
+                    "name": "Cursor",
+                    "kind": "SCALAR"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "gameIdByExternalId",
+              "description": "Get the GRID Game ID by an external ID.",
+              "type": {
+                "name": "ID",
+                "description": "Built-in ID",
+                "kind": "SCALAR"
+              },
+              "args": [
+                {
+                  "name": "dataProviderName",
+                  "description": "The name of the data provider to look by. An example could be \"STEAM\"",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "String",
+                      "kind": "SCALAR"
+                    }
+                  }
+                },
+                {
+                  "name": "externalGameId",
+                  "description": "The external ID to look for.",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "dataProviders",
+              "description": "Get supported data providers.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "playerRole",
+              "description": "Get a player role by ID.",
+              "type": {
+                "name": "PlayerRole",
+                "description": "A player's role (e.g. MID, SUPPORT).",
+                "kind": "OBJECT"
+              },
+              "args": [
+                {
+                  "name": "id",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "name": "ID",
+                      "kind": "SCALAR"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "name": "playerRoles",
+              "description": "Get multiple player roles by query specifications.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": [
+                {
+                  "name": "filter",
+                  "type": {
+                    "name": "PlayerRoleFilter",
+                    "kind": "INPUT_OBJECT"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "_service",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "_Service",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "_entities",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": [
+                {
+                  "name": "representations",
+                  "type": {
+                    "kind": "NON_NULL",
+                    "ofType": {
+                      "kind": "LIST"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Series",
+          "description": "A series.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "title",
+              "description": "The title being played in the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Title",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "tournament",
+              "description": "The tournament in which the series is being played.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Tournament",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "teams",
+              "description": "The teams participating in the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "startTimeScheduled",
+              "description": "The scheduled start time of the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "DateTime",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "format",
+              "description": "The format of the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "SeriesFormat",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "externalLinks",
+              "description": "The external series IDs and providers.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "productServiceLevels",
+              "description": "The service level for the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "streams",
+              "description": "The list of stream URLs available for the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "type",
+              "description": "The type of the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "SeriesType",
+                  "kind": "ENUM"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "private",
+              "description": "The visibility status of the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "players",
+              "description": "The players participating in the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "updatedAt",
+              "description": "The date and time of the last update.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "DateTime",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SeriesConnection",
+          "description": "The result of querying a list of series. It provides pagination information.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "totalCount",
+              "description": "Total count of series in the API.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Int",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "edges",
+              "description": "All series edges for query on a given page.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "pageInfo",
+              "description": "Information about current page being pulled with query.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "PageInfo",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SeriesEdge",
+          "description": "Series and cursor information.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "cursor",
+              "description": "Series cursor value for the edge.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Cursor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "node",
+              "description": "Series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Series",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SeriesFilter",
+          "description": "Filter for series data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "SeriesFormat",
+          "description": "The format of the series, such as: BO1, BO3, SA2.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the format.",
+              "type": {
+                "name": "ID",
+                "description": "Built-in ID",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The name of a format.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "nameShortened",
+              "description": "The shortened name of a format (max. 5 characters).",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "SeriesLiveFilter",
+          "description": "Filter for series by live data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "SeriesOrderBy",
+          "description": "Field to order results by.",
+          "kind": "ENUM"
+        },
+        {
+          "name": "SeriesPlayerFilter",
+          "description": "Filter series by participating players data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "SeriesTournamentFilter",
+          "description": "Filter for series by tournament data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "SeriesTournamentTitleFilter",
+          "description": "Filter for series by the tournament title data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "SeriesType",
+          "description": "The type of series being returned.",
+          "kind": "ENUM"
+        },
+        {
+          "name": "ServiceLevel",
+          "description": "The availability level for a given product.",
+          "kind": "ENUM"
+        },
+        {
+          "name": "String",
+          "description": "Built-in String",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "StringFilter",
+          "description": "String filter for character-based fields.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "Team",
+          "description": "A team.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The name of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "nameShortened",
+              "description": "The shortened name of a team.",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "colorPrimary",
+              "description": "The primary color of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "HexColor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "colorSecondary",
+              "description": "The secondary color of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "HexColor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "logoUrl",
+              "description": "The team logo URL.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Url",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "rating",
+              "description": "The team rating.",
+              "type": {
+                "name": "Float",
+                "description": "Built-in Float",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "externalLinks",
+              "description": "The external team IDs and providers.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "titles",
+              "description": "@deprecated('Use title field instead.') The titles the team is related to.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "title",
+              "description": "Title the team is related to. 'titles' field will be removed soon and every team will have a single title.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Title",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "organization",
+              "description": "The organization the team plays for.",
+              "type": {
+                "name": "OrganizationRelation",
+                "description": "An organization relation. Removes connection to Teams from the Organization.",
+                "kind": "OBJECT"
+              },
+              "args": []
+            },
+            {
+              "name": "private",
+              "description": "The visibility status of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "updatedAt",
+              "description": "The date and time of the last update.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "DateTime",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TeamConnection",
+          "description": "The result of querying a list of teams. It provides pagination information.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "totalCount",
+              "description": "Total count of teams in the API.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Int",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "edges",
+              "description": "All team edges for query on a given page.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "pageInfo",
+              "description": "Information about current page being pulled with query.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "PageInfo",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TeamEdge",
+          "description": "Team and cursor information.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "cursor",
+              "description": "Team cursor value cursor value for the edge.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Cursor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "node",
+              "description": "Team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Team",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TeamFilter",
+          "description": "Filter for team data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "TeamInterface",
+          "description": "An interface for team types.",
+          "kind": "INTERFACE",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The name of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "nameShortened",
+              "description": "The shortened name of a team.",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "colorPrimary",
+              "description": "The primary color of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "HexColor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "colorSecondary",
+              "description": "The secondary color of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "HexColor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "logoUrl",
+              "description": "The team logo URL.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Url",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "rating",
+              "description": "The team rating.",
+              "type": {
+                "name": "Float",
+                "description": "Built-in Float",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "titles",
+              "description": "The titles the team is related to.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TeamParticipant",
+          "description": "Team participating in the series.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "baseInfo",
+              "description": "The team base information.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Team",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "scoreAdvantage",
+              "description": "The team score advantage for the team in the series.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Int",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TeamRelation",
+          "description": "A team relation. Removes connection to Organization from the Team.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The name of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "nameShortened",
+              "description": "The shortened name of a team.",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "colorPrimary",
+              "description": "The primary color of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "HexColor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "colorSecondary",
+              "description": "The secondary color of the team.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "HexColor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "logoUrl",
+              "description": "The team logo URL.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Url",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "rating",
+              "description": "The team rating.",
+              "type": {
+                "name": "Float",
+                "description": "Built-in Float",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "titles",
+              "description": "The titles the team is related to.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "Title",
+          "description": "A title.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the title.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The name of the title.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "nameShortened",
+              "description": "The shortened name of the title (max. 20 characters).",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "logoUrl",
+              "description": "The title logo URL.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Url",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "private",
+              "description": "The visibility status of the title.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TitleFilter",
+          "description": "Filter for titles.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "Tournament",
+          "description": "A tournament.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "id",
+              "description": "The ID of the tournament.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "ID",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "description": "The name of the tournament.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "nameShortened",
+              "description": "The shortened name of the tournament (max. 30 characters).",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "externalLinks",
+              "description": "The external tournament IDs and providers.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "logoUrl",
+              "description": "The tournament logo URL.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Url",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "titles",
+              "description": "The titles linked to the tournament.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "teams",
+              "description": "The teams linked to the tournament.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "startDate",
+              "description": "The start date of the tournament.",
+              "type": {
+                "name": "Date",
+                "description": "Date formatted as ISO 8601",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "endDate",
+              "description": "The end date of the tournament.",
+              "type": {
+                "name": "Date",
+                "description": "Date formatted as ISO 8601",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "prizePool",
+              "description": "The tournament prize pool in USD.",
+              "type": {
+                "name": "Money",
+                "description": "A monetary value.",
+                "kind": "OBJECT"
+              },
+              "args": []
+            },
+            {
+              "name": "parent",
+              "description": "The parent tournament of the tournament.",
+              "type": {
+                "name": "Tournament",
+                "description": "A tournament.",
+                "kind": "OBJECT"
+              },
+              "args": []
+            },
+            {
+              "name": "children",
+              "description": "The children tournament of the tournament.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "private",
+              "description": "The visibility status of the tournament.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "venueType",
+              "description": "The type of venue where the tournament is held.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "TournamentVenueType",
+                  "kind": "ENUM"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "updatedAt",
+              "description": "The date and time of the last update.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "DateTime",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TournamentConnection",
+          "description": "The result of querying a list of tournaments. It provides pagination information.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "totalCount",
+              "description": "Total count of tournaments in the API.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Int",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "edges",
+              "description": "All tournament edges for query on a given page.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "pageInfo",
+              "description": "Information about current page being pulled with query.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "PageInfo",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TournamentEdge",
+          "description": "Tournament and cursor information.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "cursor",
+              "description": "Tournament cursor value for the edge.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Cursor",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "node",
+              "description": "Tournament.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Tournament",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "TournamentFilter",
+          "description": "Filter for tournament data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "TournamentTitleFilter",
+          "description": "Filter for tournaments by title data points.",
+          "kind": "INPUT_OBJECT"
+        },
+        {
+          "name": "TournamentVenueType",
+          "description": "Defines the venue type of a tournament.",
+          "kind": "ENUM"
+        },
+        {
+          "name": "Url",
+          "description": "URL pointing to resource.",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "VideoStream",
+          "description": "Live video stream details.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "url",
+              "description": "URL link to live video stream.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "_Any",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "_Entity",
+          "kind": "UNION"
+        },
+        {
+          "name": "_FieldSet",
+          "description": "",
+          "kind": "SCALAR"
+        },
+        {
+          "name": "_Service",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "sdl",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "__Directive",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "name",
+              "description": "The __Directive type represents a Directive that a server supports.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "isRepeatable",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "locations",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "args",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": [
+                {
+                  "name": "includeDeprecated",
+                  "type": {
+                    "name": "Boolean",
+                    "kind": "SCALAR"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "__DirectiveLocation",
+          "description": "An enum describing valid locations where a directive can be placed",
+          "kind": "ENUM"
+        },
+        {
+          "name": "__EnumValue",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "name",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "isDeprecated",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "deprecationReason",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "__Field",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "name",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "args",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": [
+                {
+                  "name": "includeDeprecated",
+                  "type": {
+                    "name": "Boolean",
+                    "kind": "SCALAR"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "type",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "__Type",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "isDeprecated",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "Boolean",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "deprecationReason",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "__InputValue",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "name",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "String",
+                  "kind": "SCALAR"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "type",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "__Type",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "defaultValue",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "isDeprecated",
+              "type": {
+                "name": "Boolean",
+                "description": "Built-in Boolean",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "deprecationReason",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "__Schema",
+          "description": "A GraphQL Introspection defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, the entry points for query, mutation, and subscription operations.",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "types",
+              "description": "A list of all types supported by this server.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "queryType",
+              "description": "The type that query operations will be rooted at.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "__Type",
+                  "kind": "OBJECT"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "mutationType",
+              "description": "If this server supports mutation, the type that mutation operations will be rooted at.",
+              "type": {
+                "name": "__Type",
+                "kind": "OBJECT"
+              },
+              "args": []
+            },
+            {
+              "name": "directives",
+              "description": "'A list of all directives supported by this server.",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "LIST"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "subscriptionType",
+              "description": "'If this server support subscription, the type that subscription operations will be rooted at.",
+              "type": {
+                "name": "__Type",
+                "kind": "OBJECT"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "__Type",
+          "kind": "OBJECT",
+          "fields": [
+            {
+              "name": "kind",
+              "type": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "name": "__TypeKind",
+                  "kind": "ENUM"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "name",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "description",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "fields",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL"
+                }
+              },
+              "args": [
+                {
+                  "name": "includeDeprecated",
+                  "type": {
+                    "name": "Boolean",
+                    "kind": "SCALAR"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "interfaces",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "possibleTypes",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL"
+                }
+              },
+              "args": []
+            },
+            {
+              "name": "enumValues",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL"
+                }
+              },
+              "args": [
+                {
+                  "name": "includeDeprecated",
+                  "type": {
+                    "name": "Boolean",
+                    "kind": "SCALAR"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "inputFields",
+              "type": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL"
+                }
+              },
+              "args": [
+                {
+                  "name": "includeDeprecated",
+                  "type": {
+                    "name": "Boolean",
+                    "kind": "SCALAR"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "ofType",
+              "type": {
+                "name": "__Type",
+                "kind": "OBJECT"
+              },
+              "args": []
+            },
+            {
+              "name": "isOneOf",
+              "description": "This field is considered experimental because it has not yet been ratified in the graphql specification",
+              "type": {
+                "name": "Boolean",
+                "description": "Built-in Boolean",
+                "kind": "SCALAR"
+              },
+              "args": []
+            },
+            {
+              "name": "specifiedByURL",
+              "type": {
+                "name": "String",
+                "description": "Built-in String",
+                "kind": "SCALAR"
+              },
+              "args": []
+            }
+          ]
+        },
+        {
+          "name": "__TypeKind",
+          "description": "An enum describing what kind of type a given __Type is",
+          "kind": "ENUM"
         }
+      ]
     }
+  }
 }

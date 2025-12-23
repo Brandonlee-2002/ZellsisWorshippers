@@ -1,477 +1,754 @@
 {
-    "data": {
-        "__schema": {
-            "queryType": {
-                "name": "Query",
-                "fields": [
-                    {
-                        "name": "title",
-                        "description": "Get a title by ID.",
-                        "type": {
-                            "name": "Title",
-                            "kind": "OBJECT"
-                        },
-                        "args": [
-                            {
-                                "name": "id",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "titles",
-                        "description": "Get all titles.",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": [
-                            {
-                                "name": "filter",
-                                "type": {
-                                    "name": "TitleFilter"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "tournament",
-                        "description": "Get a tournament by ID.",
-                        "type": {
-                            "name": "Tournament",
-                            "kind": "OBJECT"
-                        },
-                        "args": [
-                            {
-                                "name": "id",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "tournaments",
-                        "description": "Get multiple tournaments by query specifications.",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": [
-                            {
-                                "name": "filter",
-                                "type": {
-                                    "name": "TournamentFilter"
-                                }
-                            },
-                            {
-                                "name": "first",
-                                "type": {
-                                    "name": "Int"
-                                }
-                            },
-                            {
-                                "name": "after",
-                                "type": {
-                                    "name": "Cursor"
-                                }
-                            },
-                            {
-                                "name": "last",
-                                "type": {
-                                    "name": "Int"
-                                }
-                            },
-                            {
-                                "name": "before",
-                                "type": {
-                                    "name": "Cursor"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "tournamentIdByExternalId",
-                        "description": "Get the GRID Tournament ID by an external ID.",
-                        "type": {
-                            "name": "ID",
-                            "kind": "SCALAR"
-                        },
-                        "args": [
-                            {
-                                "name": "dataProviderName",
-                                "type": {}
-                            },
-                            {
-                                "name": "externalTournamentId",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "team",
-                        "description": "Get a team by ID.",
-                        "type": {
-                            "name": "Team",
-                            "kind": "OBJECT"
-                        },
-                        "args": [
-                            {
-                                "name": "id",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "teams",
-                        "description": "Get multiple teams by query specifications.",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": [
-                            {
-                                "name": "first",
-                                "type": {
-                                    "name": "Int"
-                                }
-                            },
-                            {
-                                "name": "after",
-                                "type": {
-                                    "name": "Cursor"
-                                }
-                            },
-                            {
-                                "name": "last",
-                                "type": {
-                                    "name": "Int"
-                                }
-                            },
-                            {
-                                "name": "before",
-                                "type": {
-                                    "name": "Cursor"
-                                }
-                            },
-                            {
-                                "name": "filter",
-                                "type": {
-                                    "name": "TeamFilter"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "teamIdByExternalId",
-                        "description": "Get the GRID Team ID by an external ID.",
-                        "type": {
-                            "name": "ID",
-                            "kind": "SCALAR"
-                        },
-                        "args": [
-                            {
-                                "name": "dataProviderName",
-                                "type": {}
-                            },
-                            {
-                                "name": "externalTeamId",
-                                "type": {}
-                            },
-                            {
-                                "name": "titleId",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "series",
-                        "description": "Get a series by ID.",
-                        "type": {
-                            "name": "Series",
-                            "kind": "OBJECT"
-                        },
-                        "args": [
-                            {
-                                "name": "id",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "seriesFormats",
-                        "description": "Get supported series formats.",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": []
-                    },
-                    {
-                        "name": "seriesIdByExternalId",
-                        "description": "Get the GRID Series ID by an external ID.",
-                        "type": {
-                            "name": "ID",
-                            "kind": "SCALAR"
-                        },
-                        "args": [
-                            {
-                                "name": "dataProviderName",
-                                "type": {}
-                            },
-                            {
-                                "name": "externalSeriesId",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "allSeries",
-                        "description": "Get multiple series by query specifications.",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": [
-                            {
-                                "name": "first",
-                                "type": {
-                                    "name": "Int"
-                                }
-                            },
-                            {
-                                "name": "after",
-                                "type": {
-                                    "name": "Cursor"
-                                }
-                            },
-                            {
-                                "name": "filter",
-                                "type": {
-                                    "name": "SeriesFilter"
-                                }
-                            },
-                            {
-                                "name": "last",
-                                "type": {
-                                    "name": "Int"
-                                }
-                            },
-                            {
-                                "name": "before",
-                                "type": {
-                                    "name": "Cursor"
-                                }
-                            },
-                            {
-                                "name": "orderBy",
-                                "type": {}
-                            },
-                            {
-                                "name": "orderDirection",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "player",
-                        "description": "Get a player by ID.",
-                        "type": {
-                            "name": "Player",
-                            "kind": "OBJECT"
-                        },
-                        "args": [
-                            {
-                                "name": "id",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "players",
-                        "description": "Get multiple players by query specifications.",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": [
-                            {
-                                "name": "first",
-                                "type": {
-                                    "name": "Int"
-                                }
-                            },
-                            {
-                                "name": "after",
-                                "type": {
-                                    "name": "Cursor"
-                                }
-                            },
-                            {
-                                "name": "filter",
-                                "type": {
-                                    "name": "PlayerFilter"
-                                }
-                            },
-                            {
-                                "name": "last",
-                                "type": {
-                                    "name": "Int"
-                                }
-                            },
-                            {
-                                "name": "before",
-                                "type": {
-                                    "name": "Cursor"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "playerIdByExternalId",
-                        "description": "Get the GRID Player ID by an external ID.",
-                        "type": {
-                            "name": "ID",
-                            "kind": "SCALAR"
-                        },
-                        "args": [
-                            {
-                                "name": "dataProviderName",
-                                "type": {}
-                            },
-                            {
-                                "name": "externalPlayerId",
-                                "type": {}
-                            },
-                            {
-                                "name": "titleId",
-                                "type": {
-                                    "name": "ID"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "organization",
-                        "description": "Get an organization by ID.",
-                        "type": {
-                            "name": "Organization",
-                            "kind": "OBJECT"
-                        },
-                        "args": [
-                            {
-                                "name": "id",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "organizations",
-                        "description": "Get multiple organizations by query specifications.",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": [
-                            {
-                                "name": "first",
-                                "type": {
-                                    "name": "Int"
-                                }
-                            },
-                            {
-                                "name": "after",
-                                "type": {
-                                    "name": "Cursor"
-                                }
-                            },
-                            {
-                                "name": "filter",
-                                "type": {
-                                    "name": "OrganizationFilter"
-                                }
-                            },
-                            {
-                                "name": "last",
-                                "type": {
-                                    "name": "Int"
-                                }
-                            },
-                            {
-                                "name": "before",
-                                "type": {
-                                    "name": "Cursor"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "gameIdByExternalId",
-                        "description": "Get the GRID Game ID by an external ID.",
-                        "type": {
-                            "name": "ID",
-                            "kind": "SCALAR"
-                        },
-                        "args": [
-                            {
-                                "name": "dataProviderName",
-                                "type": {}
-                            },
-                            {
-                                "name": "externalGameId",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "dataProviders",
-                        "description": "Get supported data providers.",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": []
-                    },
-                    {
-                        "name": "playerRole",
-                        "description": "Get a player role by ID.",
-                        "type": {
-                            "name": "PlayerRole",
-                            "kind": "OBJECT"
-                        },
-                        "args": [
-                            {
-                                "name": "id",
-                                "type": {}
-                            }
-                        ]
-                    },
-                    {
-                        "name": "playerRoles",
-                        "description": "Get multiple player roles by query specifications.",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": [
-                            {
-                                "name": "filter",
-                                "type": {
-                                    "name": "PlayerRoleFilter"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "name": "_service",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": []
-                    },
-                    {
-                        "name": "_entities",
-                        "type": {
-                            "kind": "NON_NULL"
-                        },
-                        "args": [
-                            {
-                                "name": "representations",
-                                "type": {}
-                            }
-                        ]
-                    }
-                ]
+  "data": {
+    "__schema": {
+      "queryType": {
+        "fields": [
+          {
+            "name": "title",
+            "description": "Get a title by ID.",
+            "args": [
+              {
+                "name": "id",
+                "description": "The ID of the title to retrieve.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "Title",
+              "description": "A title.",
+              "kind": "OBJECT"
             }
-        }
+          },
+          {
+            "name": "titles",
+            "description": "Get all titles.",
+            "args": [
+              {
+                "name": "filter",
+                "description": "Filters for titles results.",
+                "type": {
+                  "name": "TitleFilter",
+                  "description": "Filter for titles.",
+                  "kind": "INPUT_OBJECT"
+                }
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST"
+              }
+            }
+          },
+          {
+            "name": "tournament",
+            "description": "Get a tournament by ID.",
+            "args": [
+              {
+                "name": "id",
+                "description": "The ID of the tournament to retrieve.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "Tournament",
+              "description": "A tournament.",
+              "kind": "OBJECT"
+            }
+          },
+          {
+            "name": "tournaments",
+            "description": "Get multiple tournaments by query specifications.",
+            "args": [
+              {
+                "name": "filter",
+                "description": "Filters for tournament results.",
+                "type": {
+                  "name": "TournamentFilter",
+                  "description": "Filter for tournament data points.",
+                  "kind": "INPUT_OBJECT"
+                }
+              },
+              {
+                "name": "first",
+                "description": "Amount of nodes to return starting from the beginning. Defaults to 10.",
+                "type": {
+                  "name": "Int",
+                  "description": "Built-in Int",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "after",
+                "description": "Cursor, after which results to query.",
+                "type": {
+                  "name": "Cursor",
+                  "description": "Cursor value for pagination.",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "last",
+                "description": "Amount of nodes to return starting from the end.",
+                "type": {
+                  "name": "Int",
+                  "description": "Built-in Int",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "before",
+                "description": "Cursor, before which results to query.",
+                "type": {
+                  "name": "Cursor",
+                  "description": "Cursor value for pagination.",
+                  "kind": "SCALAR"
+                }
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "name": "TournamentConnection",
+                "kind": "OBJECT"
+              }
+            }
+          },
+          {
+            "name": "tournamentIdByExternalId",
+            "description": "Get the GRID Tournament ID by an external ID.",
+            "args": [
+              {
+                "name": "dataProviderName",
+                "description": "The name of the data provider to look by. An example could be \"STEAM\"",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "String",
+                    "kind": "SCALAR"
+                  }
+                }
+              },
+              {
+                "name": "externalTournamentId",
+                "description": "The external ID to look for.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "ID",
+              "description": "Built-in ID",
+              "kind": "SCALAR"
+            }
+          },
+          {
+            "name": "team",
+            "description": "Get a team by ID.",
+            "args": [
+              {
+                "name": "id",
+                "description": "The ID of the team to retrieve.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "Team",
+              "description": "A team.",
+              "kind": "OBJECT"
+            }
+          },
+          {
+            "name": "teams",
+            "description": "Get multiple teams by query specifications.",
+            "args": [
+              {
+                "name": "first",
+                "description": "Amount of nodes to return starting from the beginning. Defaults to 10.",
+                "type": {
+                  "name": "Int",
+                  "description": "Built-in Int",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "after",
+                "description": "Cursor, after which results to query.",
+                "type": {
+                  "name": "Cursor",
+                  "description": "Cursor value for pagination.",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "last",
+                "description": "Amount of nodes to return starting from the end.",
+                "type": {
+                  "name": "Int",
+                  "description": "Built-in Int",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "before",
+                "description": "Cursor, before which results to query.",
+                "type": {
+                  "name": "Cursor",
+                  "description": "Cursor value for pagination.",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "filter",
+                "description": "Filters for team results.",
+                "type": {
+                  "name": "TeamFilter",
+                  "description": "Filter for team data points.",
+                  "kind": "INPUT_OBJECT"
+                }
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "name": "TeamConnection",
+                "kind": "OBJECT"
+              }
+            }
+          },
+          {
+            "name": "teamIdByExternalId",
+            "description": "Get the GRID Team ID by an external ID.",
+            "args": [
+              {
+                "name": "dataProviderName",
+                "description": "The name of the data provider to look by. An example could be \"STEAM\"",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "String",
+                    "kind": "SCALAR"
+                  }
+                }
+              },
+              {
+                "name": "externalTeamId",
+                "description": "The external ID to look for.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              },
+              {
+                "name": "titleId",
+                "description": "The title in which the team participates.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "ID",
+              "description": "Built-in ID",
+              "kind": "SCALAR"
+            }
+          },
+          {
+            "name": "series",
+            "description": "Get a series by ID.",
+            "args": [
+              {
+                "name": "id",
+                "description": "The ID of the series to retrieve.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "Series",
+              "description": "A series.",
+              "kind": "OBJECT"
+            }
+          },
+          {
+            "name": "seriesFormats",
+            "description": "Get supported series formats.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST"
+              }
+            }
+          },
+          {
+            "name": "seriesIdByExternalId",
+            "description": "Get the GRID Series ID by an external ID.",
+            "args": [
+              {
+                "name": "dataProviderName",
+                "description": "The name of the data provider to look by. An example could be \"STEAM\"",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "String",
+                    "kind": "SCALAR"
+                  }
+                }
+              },
+              {
+                "name": "externalSeriesId",
+                "description": "The external ID to look for.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "ID",
+              "description": "Built-in ID",
+              "kind": "SCALAR"
+            }
+          },
+          {
+            "name": "allSeries",
+            "description": "Get multiple series by query specifications.",
+            "args": [
+              {
+                "name": "first",
+                "description": "Amount of nodes to return starting from the beginning. Defaults to 10.",
+                "type": {
+                  "name": "Int",
+                  "description": "Built-in Int",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "after",
+                "description": "Cursor, after which results to query.",
+                "type": {
+                  "name": "Cursor",
+                  "description": "Cursor value for pagination.",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "filter",
+                "description": "Filters for series results.",
+                "type": {
+                  "name": "SeriesFilter",
+                  "description": "Filter for series data points.",
+                  "kind": "INPUT_OBJECT"
+                }
+              },
+              {
+                "name": "last",
+                "description": "Amount of nodes to return starting from the end.",
+                "type": {
+                  "name": "Int",
+                  "description": "Built-in Int",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "before",
+                "description": "Cursor, before which results to query.",
+                "type": {
+                  "name": "Cursor",
+                  "description": "Cursor value for pagination.",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "orderBy",
+                "description": "Ordering of resulting series set.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "SeriesOrderBy",
+                    "kind": "ENUM"
+                  }
+                }
+              },
+              {
+                "name": "orderDirection",
+                "description": "Whether to order by ascending or descending direction.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "OrderDirection",
+                    "kind": "ENUM"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "name": "SeriesConnection",
+                "kind": "OBJECT"
+              }
+            }
+          },
+          {
+            "name": "player",
+            "description": "Get a player by ID.",
+            "args": [
+              {
+                "name": "id",
+                "description": "The ID of the player to retrieve.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "Player",
+              "description": "A player.",
+              "kind": "OBJECT"
+            }
+          },
+          {
+            "name": "players",
+            "description": "Get multiple players by query specifications.",
+            "args": [
+              {
+                "name": "first",
+                "description": "Amount of nodes to return starting from the beginning. Defaults to 10.",
+                "type": {
+                  "name": "Int",
+                  "description": "Built-in Int",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "after",
+                "description": "Cursor, after which results to query.",
+                "type": {
+                  "name": "Cursor",
+                  "description": "Cursor value for pagination.",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "filter",
+                "description": "Filters for player results.",
+                "type": {
+                  "name": "PlayerFilter",
+                  "description": "Filter for player data points.",
+                  "kind": "INPUT_OBJECT"
+                }
+              },
+              {
+                "name": "last",
+                "description": "Amount of nodes to return starting from the end.",
+                "type": {
+                  "name": "Int",
+                  "description": "Built-in Int",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "before",
+                "description": "Cursor, before which results to query.",
+                "type": {
+                  "name": "Cursor",
+                  "description": "Cursor value for pagination.",
+                  "kind": "SCALAR"
+                }
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "name": "PlayerConnection",
+                "kind": "OBJECT"
+              }
+            }
+          },
+          {
+            "name": "playerIdByExternalId",
+            "description": "Get the GRID Player ID by an external ID.",
+            "args": [
+              {
+                "name": "dataProviderName",
+                "description": "The name of the data provider to look by. An example could be \"STEAM\"",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "String",
+                    "kind": "SCALAR"
+                  }
+                }
+              },
+              {
+                "name": "externalPlayerId",
+                "description": "The external ID to look for.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              },
+              {
+                "name": "titleId",
+                "description": "The title player belongs to.",
+                "type": {
+                  "name": "ID",
+                  "description": "Built-in ID",
+                  "kind": "SCALAR"
+                }
+              }
+            ],
+            "type": {
+              "name": "ID",
+              "description": "Built-in ID",
+              "kind": "SCALAR"
+            }
+          },
+          {
+            "name": "organization",
+            "description": "Get an organization by ID.",
+            "args": [
+              {
+                "name": "id",
+                "description": "The ID of the organization to retrieve.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "Organization",
+              "description": "An organization.",
+              "kind": "OBJECT"
+            }
+          },
+          {
+            "name": "organizations",
+            "description": "Get multiple organizations by query specifications.",
+            "args": [
+              {
+                "name": "first",
+                "description": "Amount of nodes to return starting from the beginning. Defaults to 10.",
+                "type": {
+                  "name": "Int",
+                  "description": "Built-in Int",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "after",
+                "description": "Cursor, after which results to query.",
+                "type": {
+                  "name": "Cursor",
+                  "description": "Cursor value for pagination.",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "filter",
+                "description": "Filters for organization results.",
+                "type": {
+                  "name": "OrganizationFilter",
+                  "description": "Filter for organization by data points.",
+                  "kind": "INPUT_OBJECT"
+                }
+              },
+              {
+                "name": "last",
+                "description": "Amount of nodes to return starting from the end.",
+                "type": {
+                  "name": "Int",
+                  "description": "Built-in Int",
+                  "kind": "SCALAR"
+                }
+              },
+              {
+                "name": "before",
+                "description": "Cursor, before which results to query.",
+                "type": {
+                  "name": "Cursor",
+                  "description": "Cursor value for pagination.",
+                  "kind": "SCALAR"
+                }
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "name": "OrganizationConnection",
+                "kind": "OBJECT"
+              }
+            }
+          },
+          {
+            "name": "gameIdByExternalId",
+            "description": "Get the GRID Game ID by an external ID.",
+            "args": [
+              {
+                "name": "dataProviderName",
+                "description": "The name of the data provider to look by. An example could be \"STEAM\"",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "String",
+                    "kind": "SCALAR"
+                  }
+                }
+              },
+              {
+                "name": "externalGameId",
+                "description": "The external ID to look for.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "ID",
+              "description": "Built-in ID",
+              "kind": "SCALAR"
+            }
+          },
+          {
+            "name": "dataProviders",
+            "description": "Get supported data providers.",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST"
+              }
+            }
+          },
+          {
+            "name": "playerRole",
+            "description": "Get a player role by ID.",
+            "args": [
+              {
+                "name": "id",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "name": "ID",
+                    "kind": "SCALAR"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "name": "PlayerRole",
+              "description": "A player's role (e.g. MID, SUPPORT).",
+              "kind": "OBJECT"
+            }
+          },
+          {
+            "name": "playerRoles",
+            "description": "Get multiple player roles by query specifications.",
+            "args": [
+              {
+                "name": "filter",
+                "type": {
+                  "name": "PlayerRoleFilter",
+                  "description": "Filter by player role.",
+                  "kind": "INPUT_OBJECT"
+                }
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST"
+              }
+            }
+          },
+          {
+            "name": "_service",
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "name": "_Service",
+                "kind": "OBJECT"
+              }
+            }
+          },
+          {
+            "name": "_entities",
+            "args": [
+              {
+                "name": "representations",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "LIST"
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST"
+              }
+            }
+          }
+        ]
+      }
     }
+  }
 }
