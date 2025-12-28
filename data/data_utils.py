@@ -1,18 +1,57 @@
-from utils.consts import GRID_API_KEY
+from utils.consts import GRID_API_KEY, LOL_TITLE_ID
 import requests
 
-def fetch_all_tournaments():
+def fetch_tournament_ids(cursor="", count=None):
+
+    MAX_COUNT = 50
     hasNext = True
 
-    tournament_query = """
+    res = []
 
+    variables = {
+        "gameId": LOL_TITLE_ID,
+        "cursor": cursor,
+        "count": MAX_COUNT
+    }
 
+    while hasNext and count > 0 :
 
-    """
-
-    while hasNext:
+        tournament_query = """
+            query GetTournaments ($gameId: ID, $cursor: CURSOR, $count: SCALAR) {
+                tournaments (
+                    filter: {
+                        titleId: $gameId,
+                        hasParent: FALSE,
+                    }
+                    after: $cursor,
+                    first: $count
+                ) {
+                    pageInfo {
+                        hasNextPage
+                        endCursor
+                    }
+                    edges {
+                        cursor
+                        node {
+                            name
+                            id
+                            teams {
+                                name
+                                id
+                            }
+                        }
+                    }
+                }
+            }
+        """
         data = fetch_from_grid()
 
+        res.append(data)
+
+        hasNext = data['data']['pageInfo']['hasNextPage']
+        count -= MAX_COUNT
+
+    return res
 
 
 def fetch_from_grid(
